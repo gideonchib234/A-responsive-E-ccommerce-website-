@@ -1,0 +1,189 @@
+:root{
+    --primary: rgb(240, 236, 236);
+    --dark: rgb(19, 18, 18);
+    --light: #fff;
+    --shadow: 0 3px 10px rgb(37, 37, 37);
+}
+html{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+}
+body{
+    background: rgb(175, 174, 174);
+    margin: 30px 50px;
+    line-height: 1.4;
+}
+.btn{
+    background:var(--dark);
+    color: var(--light);
+    padding: 10px 15px;
+    font-size: 14px;
+    text-decoration: none;
+    border: 0;
+}
+.btn:hover{
+    opacity: 0.6;
+}
+.wrapper{
+    display: grid;
+    grid-gap: 20px;
+} 
+img{
+    width: 100%;
+}
+
+.navbar ul{
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+.navbar a{
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    background: var(--primary);
+    box-shadow: var(--shadow);
+    border: 0;
+    padding: 20px 30px;
+    color: var(--dark);
+    text-transform: uppercase;
+    transition: .5s;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: var(--dark);
+    color: var(--light);
+}
+.head-container{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+
+}
+.showcase{
+    grid-area: showcase;
+    min-height: 400px;
+    background: url(images/concept-looking-recipes-with-modern-laptop-table-kitchen_244784-550.avif);
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.showcase h1{
+    font-size: 50px;
+    margin-bottom: 0;
+    color: var(--light);
+}
+
+.showcase p{
+    font-size: 19px;
+    margin-top: 0;
+    color: var(--light);
+
+}
+.top-box{
+    background: var(--primary);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    padding: 20px;
+}
+.top-box .price{
+    font-size: 36px;
+}
+.top-box .btn{
+    text-align: center;
+}
+.top-box h4{
+    font-size: 23px;
+    text-transform: uppercase;
+}
+.top-box-a{
+    grid-area: top-box-a;
+}
+.top-box-b{
+    grid-area: top-box-b;
+}
+.boxes{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.box{
+    background: var(--primary);
+    padding: 25px 36px;
+    text-align: center;    
+}
+.info{
+    background: var(--primary);
+    box-shadow: var(--shadow);  
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+}
+.portfolio{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+    justify-content: center  ;
+}
+.portfolio img{
+    width:200px;
+    height: 200px;
+
+}
+.footer p{
+    background: var(--dark) ;
+    color: var(--light);
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
+    .head-container{
+        grid-template-areas: 
+        'showcase showcase'
+        'top-box-a top-box-b';
+    }
+
+    .showcase h1{
+        font-size: 2.5rem; 
+    }
+    .navbar ul{
+        grid-template-columns: 1fr ;
+    }
+
+    .info{
+        grid-template-columns: 1fr;
+    }
+
+    .info .btn{
+        display: block;
+        text-align:center;
+        margin: auto;
+    }
+    .portfolio{
+        grid-template-columns: 1fr;
+    }
+}
+    @media ( max-width: 500px){
+        .head-container{
+            grid-template-areas: 
+            'showcase'
+            'top-box-a'
+            'top-box-b';
+        }
+    }
+
