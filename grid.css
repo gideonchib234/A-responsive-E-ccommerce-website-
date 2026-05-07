@@ -57,7 +57,7 @@ img{
     background-color: var(--dark);
     color: var(--light);
 }
-.head-container{
+.head-container{ 
     display: grid;
     grid-gap: 20px;
     grid-template-areas: 
